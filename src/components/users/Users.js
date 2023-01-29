@@ -74,20 +74,24 @@ export class Users extends Component {
   
     render() {
     return (
-      <div>
-         {this.statement.users.map(user => (
-            <div class="card">
-                <img class="card-img-top" src={user.avatar_url} alt="">
-                <div class="card-body">
-                    <h4 class="card-title">{user.login}</h4>
-                    <p class="card-text">
-                        <a href={user.html_url} className='btn-success'>Show more</a>
-                        <a href={user.repos_url} className='btn-warning'>Repositories</a>
-                    </p>
-                </div>
-            </div>
-         ))}
-      </div>
+        <div>
+          <div className="row">
+            {this.state.users.map(user => (
+                <div className='col-md-4'>
+                  <div class="card">
+                    <img class="card-img-top" src={user.avatar_url} alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">{user.login}</h4>
+                        <p class="card-text">
+                            <a href={user.html_url} className='btn-success'>Show more</a>
+                            <a href={user.repos_url} className='btn-warning'>Repositories</a>
+                        </p>
+                    </div>
+                  </div>
+                </div>                
+            ))}                            
+          </div>
+        </div>
     )
   }
 }
