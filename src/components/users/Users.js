@@ -83,8 +83,8 @@ export class Users extends Component {
                     <div class="card-body">
                         <h4 class="card-title">{user.login}</h4>
                         <p class="card-text">
-                            <a href={user.html_url} className='btn-success'>Show more</a>
-                            <a href={user.repos_url} className='btn-warning'>Repositories</a>
+                            <a href={user.html_url} className='btn btn-success'>Show more</a>
+                            <a href={user.repos_url} className='btn btn-warning'>Repositories</a>
                         </p>
                     </div>
                   </div>
