@@ -1,6 +1,6 @@
 //rce : to manage data 
 import React, { Component } from 'react'
-
+import axios from 'axios'; // npm i axios
 export class Users extends Component {
   
     constructor(props) {
@@ -71,7 +71,20 @@ export class Users extends Component {
          ]
       }
     }
-  
+
+    getUsers = () => {
+      axios.get('https://api.github.com/users')
+        .then(respense => {
+            this.setState({
+              users: respense.data
+            })
+        })
+    }
+    
+    componentDidMount(){
+      this.getUsers();
+    }
+
     render() {
     return (
         <div>
