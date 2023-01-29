@@ -79,7 +79,7 @@ export class Users extends Component {
             {this.state.users.map(user => (
                 <div className='col-md-4'>
                   <div class="card">
-                    <img class="card-img-top" src={user.avatar_url} alt="">
+                    <img class="card-img-top" src={user.avatar_url} alt=""/>
                     <div class="card-body">
                         <h4 class="card-title">{user.login}</h4>
                         <p class="card-text">
